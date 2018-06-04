@@ -1,0 +1,979 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="c55d3c42-c6ca-41f2-a6c7-eb164b824b09" activeEnvironment="Default" name="TestRallyHealth" resourceRoot="${projectDir}" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="TestSuite 1"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting>
+  </con:settings>
+  <con:interface xsi:type="con:RestService" id="b613fcbf-1c09-43e0-a81f-07669f1a85eb" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://10.131.168.50" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="http://10.131.168.50">
+      <con:part>
+        <con:url>http://10.131.168.50</con:url>
+        <con:content><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>IIS Windows</title>
+    <style type="text/css">
+      <!--body {
+	color:#000000;
+	background-color:#0072C6;
+	margin:0;
+}
+
+#container {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	}
+
+a img {
+	border:none;
+}-->
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <a href="http://go.microsoft.com/fwlink/?linkid=66138&amp;clcid=0x409">
+        <img src="iisstart.png" alt="IIS" width="960" height="600"/>
+      </a>
+    </div>
+  </body>
+</html>]]></con:content>
+        <con:type>http://www.w3.org/1999/xhtml</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://10.131.168.50</con:endpoint>
+    </con:endpoints>
+    <con:resource name="RHLastpass" path="/RallyHealth/api/RHLastpass" id="4d3d0faf-21ca-46d3-8f38-a8854796c102">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="UserDetails" id="25b8d79a-d4bc-494e-88a0-f5a00e75b9cb" method="POST">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json; charset=utf-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element xmlns:rhl="http://10.131.168.50/RallyHealth/api/RHLastpass">rhl:Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="b8480bae-442a-48d3-aeae-0cc01cd8090d" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://10.131.168.50</con:endpoint>
+          <con:request>{
+  "Email_ID": "maneet.singh@techwizsolution.com",
+  "Action": "R"
+}</con:request>
+          <con:originalUri>http://10.131.168.50/RallyHealth/api/RHLastpass</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="c3d6ba11-12f2-4b47-97a2-78da60d6d20c" name="TestSuite 1">
+    <con:settings/>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="0d8e4171-5a16-4bd9-be73-157a28479669" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="AddUserDetails" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="groovy" name="Read data From Excel" id="b6065d78-870b-4f36-b50a-9356bb7aa12a">
+        <con:settings/>
+        <con:config>
+          <script>import java.io.File
+import java.util.Date
+import jxl.*
+
+import groovy.xml.MarkupBuilder
+import org.custommonkey.xmlunit.*
+import com.eviware.soapui.support.GroovyUtils;
+import groovy.json.JsonSlurper
+
+def projectpath = context.expand('${projectDir}')
+log.info context.expand('${projectDir}')
+def myTestSuite = testRunner.testCase.testSuite
+def myTestCase = testRunner.testCase.name
+
+def randomString = org.apache.commons.lang.RandomStringUtils.random(5, true, true) // To make Unique Names
+//log.info randomString
+
+    //read excelfile
+    wb = Workbook.getWorkbook(new File(projectpath+'/Data/SOAPdata.xls'))
+    sheet = wb.getSheet(1)   // Select desired Sheet for External Excel data 
+    log.info "Rows    "+sheet.getRows()
+    log.info "Columns   "+sheet.getColumns()      
+    for (int i=1; i&lt;sheet.getRows();i++) {    // loop for row
+     log.info ("Setting Property Values for test at Suite level...")
+     log.info ("Getting Data from Excel Row:    "+i)
+      for (int j=0; j&lt;sheet.getColumns(); j++){   // loop for coloumn
+      def data =sheet.getCell(j,i).getContents() // Read Data from Excel
+          //log.info data
+      
+       
+       
+       
+       
+       // Set property values for desired Test case from external Excel file
+       def prop =  testRunner.testCase.testSuite 
+     // input request data    
+       prop.setPropertyValue("First_Name",'"'+sheet.getCell(0,i).getContents()+'"')      
+       prop.setPropertyValue("Last_Name",'"'+sheet.getCell(1,i).getContents()+'"')    
+       prop.setPropertyValue("Email_ID",'"'+sheet.getCell(2,i).getContents()+'"')      
+       prop.setPropertyValue("Action",'"'+sheet.getCell(3,i).getContents()+'"')    
+     //Expected response data
+       prop.setPropertyValue("Staus",sheet.getCell(4,i).getContents()) // OK as Expected Status Code        
+     }
+     
+     
+     // navigate to desired Test case and run
+    log.info "***************executing test for data ROW**************" + i
+
+    def tStep = testRunner.testCase.getTestStepByName("AddUserDetails")
+   log.info("Executing SOAP Request for Login"+tStep)
+      Thread.sleep(2000)
+     tStep.run(testRunner, context)
+  
+    // Reading response data
+    log.info("Reading response data")
+    def response = tStep.getPropertyValue("Response");
+    log.info(response)
+    myTestSuite.setPropertyValue(myTestCase.toString(),response); 
+  
+  }
+ 
+wb.close()
+log.info "End of Execution"</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Groovy Script" id="8ba62577-36d7-4279-a5ea-6e1757498761" disabled="true">
+        <con:settings/>
+        <con:config>
+          <script>//def myTestSuite = testRunner.testCase.testSuite
+//def myTestCase = testRunner.testCase.name
+//myTestSuite.setPropertyValue( myTestCase.toString(),"Response");
+//
+//log.info testRunner.testCase.testSteps["AddUserDetails"].getPropertyValue("Response")</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="SetPropertyValues" id="c0c47e7b-147b-44ae-a05b-df41f150e77e" disabled="true">
+        <con:settings/>
+        <con:config>
+          <delay>2000</delay>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="AddUserDetails" id="1fb5e45d-eddd-47a8-bf50-1b44179edc59">
+        <con:settings/>
+        <con:config service="http://10.131.168.50" resourcePath="/RallyHealth/api/RHLastpass" methodName="UserDetails" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="AddUserDetails" id="b8480bae-442a-48d3-aeae-0cc01cd8090d" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://10.131.168.50</con:endpoint>
+            <con:request>{
+  "First_Name": ${#TestSuite#First_Name},
+  "Last_Name": ${#TestSuite#Last_Name},
+  "Email_ID": ${#TestSuite#Email_ID},
+  "Action": ${#TestSuite#Action}  
+}</con:request>
+            <con:originalUri>http://10.131.168.50/RallyHealth/api/RHLastpass</con:originalUri>
+            <con:assertion type="Sensitive Information Exposure" id="87c4d2a0-9ffc-460c-9ebf-545b1c0cc0d3" name="Sensitive Information Exposure">
+              <con:configuration>
+                <IncludeProjectSpecific>true</IncludeProjectSpecific>
+                <IncludeGlobal>true</IncludeGlobal>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="deca3c2b-b25e-492b-a71a-94b1e9f28dba" name="Response SLA">
+              <con:configuration>
+                <SLA>5000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Schema Compliance" id="2a58de45-2bb8-47cd-b7b3-51771f412106" name="Schema Compliance">
+              <con:configuration>
+                <definition>http://10.131.168.50</definition>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Valid HTTP Status Codes" id="6bcc5587-4e5c-450a-8dde-7ff0ef872157" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="d21f70e5-841b-4908-a7ef-f2b1d7fee773" name="JsonPath Count">
+              <con:configuration>
+                <path>$..*</path>
+                <content>1</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="0c68ac98-52a0-477b-a860-d57df898c555" name="JsonPath Existence Match">
+              <con:configuration>
+                <path>$.status</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Invalid HTTP Status Codes" id="1d630d66-53bf-4fb4-bafb-3de8dd7f4f63" name="Invalid HTTP Status Codes">
+              <con:configuration>
+                <codes>300,400,500,502</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="19ce4390-1c35-4d12-a037-f907122dad0d" name="Contains">
+              <con:configuration>
+                <token>OK</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="Verify Response" id="7215e546-47ec-4411-b1f3-b2db2c2f948a" disabled="true">
+        <con:settings/>
+        <con:config>
+          <delay>2000</delay>
+        </con:config>
+      </con:testStep>
+      <con:tearDownScript>import groovy.json.JsonSlurper
+
+
+
+def responseContent  = testRunner.testCase.getTestStepByName("AddUserDetails").getPropertyValue("Response");
+slurperresponse = new JsonSlurper().parseText(responseContent)
+log.info (slurperresponse.Action)
+log.info (slurperresponse.Error)
+if(slurperresponse.Error=="Error"){
+log.info ("Error Occurred Stopping Execution to Next Test Steps")
+testRunner.testCase.testSuite.getTestCaseByName("FetchUserDetails").disabled = true
+testRunner.testCase.testSuite.getTestCaseByName("UpdateUserDetails").disabled = true
+testRunner.testCase.testSuite.getTestCaseByName("DeleteUser").disabled = true
+}else{
+log.info ("AddUserDetails is PASS")
+testRunner.testCase.testSuite.getTestCaseByName("FetchUserDetails").disabled = false
+testRunner.testCase.testSuite.getTestCaseByName("UpdateUserDetails").disabled = false
+testRunner.testCase.testSuite.getTestCaseByName("DeleteUser").disabled = false
+	
+}
+
+context.runners.add( testRunner )</con:tearDownScript>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="e0c0e2de-17ef-4b64-ba26-1a059ec8c351" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="FetchUserDetails" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="groovy" name="Read data From Excel" id="e8493037-0a5c-43ab-b8ca-e4ef5b2ee35c">
+        <con:settings/>
+        <con:config>
+          <script>import java.io.File
+import java.util.Date
+import jxl.*
+import groovy.json.*
+
+import groovy.xml.MarkupBuilder
+import org.custommonkey.xmlunit.*
+import com.eviware.soapui.support.GroovyUtils;
+
+def projectpath = context.expand('${projectDir}')
+ log.info context.expand('${projectDir}')
+ def myTestSuite = testRunner.testCase.testSuite
+def myTestCase = testRunner.testCase.name
+
+
+
+//    //read excelfile
+    wb = Workbook.getWorkbook(new File(projectpath+'/Data/SOAPdata.xls'))
+    sheet = wb.getSheet(0)   // Select desired Sheet for External Excel data 
+log.info "Rows    "+sheet.getRows()
+log.info "Columns   "+sheet.getColumns()      
+        for (int i=1; i&lt;sheet.getRows();i++) {    // loop for row
+        	log.info ("Setting Property Values for test at Suite level...")
+     	log.info ("Getting Data from Excel Row:    "+i)
+      for (int j=0; j&lt;sheet.getColumns(); j++){   // loop for coloumn
+          def data =sheet.getCell(j,i).getContents() // Read Data from Excel
+          log.info data
+
+       // Set property values for desired Test case
+      def prop =  testRunner.testCase.testSuite
+    
+     
+     // input request data
+     
+       prop.setPropertyValue("Email_ID",'"'+sheet.getCell(0,i).getContents()+'"')      
+       prop.setPropertyValue("Action",'"'+sheet.getCell(1,i).getContents()+'"')      
+     //Expected response data
+     prop.setPropertyValue("fullname",sheet.getCell(2,i).getContents()) 
+//  
+//     prop.setPropertyValue("companyId",sheet.getCell(3,i).getContents()) 
+//       
+//     prop.setPropertyValue("gpmsCode",sheet.getCell(4,i).getContents()) 
+//  
+//     prop.setPropertyValue("providerId",sheet.getCell(5,i).getContents()) 
+//     
+//     prop.setPropertyValue("status",sheet.getCell(6,i).getContents()) 
+//        
+     }
+     // navigate to desired Test case and run
+    log.info "***************executing test for data ROW**************" + i
+      //def tCase = testcase
+      def tStep = testRunner.testCase.getTestStepByName("FetchuserDetails")
+     log.info("Executing SOAP Request for Login"+tStep)
+     tStep.run(testRunner, context)
+    // Reading response data
+    log.info("Reading response data")
+    def response = tStep.getPropertyValue("Response");
+    log.info(response)
+    //define "json" which will be the name of my variable
+    def json = new JsonSlurper().parseText(response)
+
+//grab that json file result I want
+    log.info new JsonBuilder(json).toString()
+
+      try{
+       assert new JsonBuilder(json).toString().trim().contains(testRunner.testCase.testSuite.getPropertyValue("fullname"))
+        log.info("*************Script Assertion PASS************")
+      
+      }catch(AssertionError e){
+
+
+      	log.info("*************Script Assertion Failed************")
+      	context.getTestRunner().fail("*********************Could Not Validate Fetch User Details Request********************")
+      }
+//   // def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+// 
+  myTestSuite.setPropertyValue( myTestCase.toString(),response);
+  }
+//   
+//
+//
+wb.close()
+////log.info "End of Execution"</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="SetPropertyValues" id="dfd09cb9-83b0-47e3-bbb3-10d391f76622" disabled="true">
+        <con:settings/>
+        <con:config>
+          <delay>2000</delay>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="FetchuserDetails" id="fca44def-c5ba-4d9e-8b29-e2f66fc9bb63">
+        <con:settings/>
+        <con:config service="http://10.131.168.50" resourcePath="/RallyHealth/api/RHLastpass" methodName="UserDetails" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="FetchuserDetails" id="b8480bae-442a-48d3-aeae-0cc01cd8090d" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://10.131.168.50</con:endpoint>
+            <con:request>{
+  "Email_ID":${#TestSuite#Email_ID},
+  "Action":${#TestSuite#Action}
+}</con:request>
+            <con:originalUri>http://10.131.168.50/RallyHealth/api/RHLastpass</con:originalUri>
+            <con:assertion type="Sensitive Information Exposure" id="87c4d2a0-9ffc-460c-9ebf-545b1c0cc0d3" name="Sensitive Information Exposure">
+              <con:configuration>
+                <IncludeProjectSpecific>true</IncludeProjectSpecific>
+                <IncludeGlobal>true</IncludeGlobal>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="deca3c2b-b25e-492b-a71a-94b1e9f28dba" name="Response SLA">
+              <con:configuration>
+                <SLA>3500</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="GroovyScriptAssertion" id="0bc60239-49d2-4482-a13e-ac7eaf3c66b1" name="Script Assertion">
+              <con:configuration>
+                <scriptText/>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Schema Compliance" id="2a58de45-2bb8-47cd-b7b3-51771f412106" name="Schema Compliance">
+              <con:configuration>
+                <definition>http://10.131.168.50</definition>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Valid HTTP Status Codes" id="6bcc5587-4e5c-450a-8dde-7ff0ef872157" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="d21f70e5-841b-4908-a7ef-f2b1d7fee773" name="JsonPath Count">
+              <con:configuration>
+                <path>$..*</path>
+                <content>18</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="0c68ac98-52a0-477b-a860-d57df898c555" name="JsonPath Existence Match">
+              <con:configuration>
+                <path>$.Users.*.fullname</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Invalid HTTP Status Codes" id="1d630d66-53bf-4fb4-bafb-3de8dd7f4f63" name="Invalid HTTP Status Codes">
+              <con:configuration>
+                <codes>300,400,500,502</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="Verify Response" id="df2aadc2-0512-4397-b179-52fc21b05e8a" disabled="true">
+        <con:settings/>
+        <con:config>
+          <delay>2000</delay>
+        </con:config>
+      </con:testStep>
+      <con:tearDownScript>context.runners.add( testRunner )</con:tearDownScript>
+      <con:properties>
+        <con:property>
+          <con:name>Email_ID</con:name>
+          <con:value>"maneet.singh@techwizsolution.com"</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Action</con:name>
+          <con:value>"R"</con:value>
+        </con:property>
+      </con:properties>
+    </con:testCase>
+    <con:testCase id="d7f4bebd-15fc-4b4c-b226-40d3cc32f214" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="UpdateUserDetails" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="groovy" name="Read data From Excel" id="c413586e-f612-46d9-8209-2199043803a6">
+        <con:settings/>
+        <con:config>
+          <script>import java.io.File
+import java.util.Date
+import jxl.*
+
+import groovy.xml.MarkupBuilder
+import org.custommonkey.xmlunit.*
+import com.eviware.soapui.support.GroovyUtils;
+
+def projectpath = context.expand('${projectDir}')
+log.info context.expand('${projectDir}')
+def myTestSuite = testRunner.testCase.testSuite
+def myTestCase = testRunner.testCase.name
+
+def randomString = org.apache.commons.lang.RandomStringUtils.random(5, true, true) // To make Unique Names
+//log.info randomString
+
+    //read excelfile
+    wb = Workbook.getWorkbook(new File(projectpath+'/Data/SOAPdata.xls'))
+    sheet = wb.getSheet(2)   // Select desired Sheet for External Excel data 
+    log.info "Rows    "+sheet.getRows()
+    log.info "Columns   "+sheet.getColumns()      
+    for (int i=1; i&lt;sheet.getRows();i++) {    // loop for row
+     log.info ("Setting Property Values for test at Suite level...")
+     log.info ("Getting Data from Excel Row:    "+i)
+      for (int j=0; j&lt;sheet.getColumns(); j++){   // loop for coloumn
+      def data =sheet.getCell(j,i).getContents() // Read Data from Excel
+          //log.info data
+      
+       
+       
+       
+       
+       // Set property values for desired Test case from external Excel file
+       def prop =  testRunner.testCase.testSuite 
+     // input request data    
+       prop.setPropertyValue("First_Name",'"'+sheet.getCell(0,i).getContents()+'"')      
+       prop.setPropertyValue("Last_Name",'"'+sheet.getCell(1,i).getContents()+'"')    
+       prop.setPropertyValue("Email_ID",'"'+sheet.getCell(2,i).getContents()+'"')      
+       prop.setPropertyValue("Action",'"'+sheet.getCell(3,i).getContents()+'"')    
+     //Expected response data
+       prop.setPropertyValue("Status",sheet.getCell(4,i).getContents()) // OK as Expected Status Code        
+     }
+     
+     
+     // navigate to desired Test case and run
+    log.info "***************executing test for data ROW**************" + i
+
+    def tStep = testRunner.testCase.getTestStepByName("UpdateUserDetails")
+   log.info("Executing SOAP Request for UpdateUserDetails"+tStep)
+     tStep.run(testRunner, context)
+    // Reading response data
+    log.info("Reading response data")
+    def response = tStep.getPropertyValue("Response");
+    log.info(response) 
+    myTestSuite.setPropertyValue( myTestCase.toString(),response);
+  }
+wb.close()
+log.info "End of Execution"</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="SetPropertyValues" id="d121276e-66e6-43f4-9afa-202803908812" disabled="true">
+        <con:settings/>
+        <con:config>
+          <delay>2000</delay>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="UpdateUserDetails" id="b33d253c-ac03-4dfe-bb9d-ad1fd3b4b216">
+        <con:settings/>
+        <con:config service="http://10.131.168.50" resourcePath="/RallyHealth/api/RHLastpass" methodName="UserDetails" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="UpdateUserDetails" id="b8480bae-442a-48d3-aeae-0cc01cd8090d" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://10.131.168.50</con:endpoint>
+            <con:request>{
+  "First_Name": ${#TestSuite#First_Name},
+  "Last_Name": ${#TestSuite#Last_Name},
+  "Email_ID": ${#TestSuite#Email_ID},
+  "Action": ${#TestSuite#Action}  
+}</con:request>
+            <con:originalUri>http://10.131.168.50/RallyHealth/api/RHLastpass</con:originalUri>
+            <con:assertion type="Sensitive Information Exposure" id="87c4d2a0-9ffc-460c-9ebf-545b1c0cc0d3" name="Sensitive Information Exposure">
+              <con:configuration>
+                <IncludeProjectSpecific>true</IncludeProjectSpecific>
+                <IncludeGlobal>true</IncludeGlobal>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="deca3c2b-b25e-492b-a71a-94b1e9f28dba" name="Response SLA">
+              <con:configuration>
+                <SLA>5000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="GroovyScriptAssertion" id="0bc60239-49d2-4482-a13e-ac7eaf3c66b1" name="Script Assertion">
+              <con:configuration>
+                <scriptText>import groovy.json.JsonSlurper 
+
+def response = messageExchange.response.responseContent
+def jsonSlurper = new JsonSlurper()
+def object = jsonSlurper.parseText(response)
+
+
+
+
+
+
+
+
+// TC-1
+log.info ("               TC-1: To Verify Staus as OK in  Response       ")
+def ActualName =  object.status.toString()
+def ExpectedName=context.expand('${#TestSuite#status}')
+assert ActualName==ExpectedName
+log.info ("               Expected:    "+ExpectedName)
+log.info ("               Actual:    "+ActualName)
+log.info ("*************Assertion-1 Pass*****************")</scriptText>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Schema Compliance" id="2a58de45-2bb8-47cd-b7b3-51771f412106" name="Schema Compliance">
+              <con:configuration>
+                <definition>http://10.131.168.50</definition>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Valid HTTP Status Codes" id="6bcc5587-4e5c-450a-8dde-7ff0ef872157" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="d21f70e5-841b-4908-a7ef-f2b1d7fee773" name="JsonPath Count">
+              <con:configuration>
+                <path>$..*</path>
+                <content>1</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="0c68ac98-52a0-477b-a860-d57df898c555" name="JsonPath Existence Match">
+              <con:configuration>
+                <path>$.status</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Invalid HTTP Status Codes" id="1d630d66-53bf-4fb4-bafb-3de8dd7f4f63" name="Invalid HTTP Status Codes">
+              <con:configuration>
+                <codes>300,400,500,502</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="19ce4390-1c35-4d12-a037-f907122dad0d" name="Contains">
+              <con:configuration>
+                <token>OK</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="Verify Response" id="320aa07e-9d66-4c75-85b6-d2cdfd7dec03" disabled="true">
+        <con:settings/>
+        <con:config>
+          <delay>2000</delay>
+        </con:config>
+      </con:testStep>
+      <con:tearDownScript>context.runners.add( testRunner )</con:tearDownScript>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="2956e263-daae-4def-8ae0-1d286dfbc592" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DeleteUser" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="groovy" name="Read data From Excel" id="8b507e91-31bf-413a-93fb-a3c1427bdc61">
+        <con:settings/>
+        <con:config>
+          <script>import java.io.File
+import java.util.Date
+import jxl.*
+
+import groovy.xml.MarkupBuilder
+import org.custommonkey.xmlunit.*
+import com.eviware.soapui.support.GroovyUtils;
+
+def projectpath = context.expand('${projectDir}')
+ log.info context.expand('${projectDir}')
+ def myTestSuite = testRunner.testCase.testSuite
+def myTestCase = testRunner.testCase.name
+
+
+
+//    //read excelfile
+    wb = Workbook.getWorkbook(new File(projectpath+'/Data/SOAPdata.xls'))
+    sheet = wb.getSheet(3)   // Select desired Sheet for External Excel data 
+log.info "Rows    "+sheet.getRows()
+log.info "Columns   "+sheet.getColumns()      
+        for (int i=1; i&lt;sheet.getRows();i++) {    // loop for row
+        	log.info ("Setting Property Values for test at Suite level...")
+     	log.info ("Getting Data from Excel Row:    "+i)
+      for (int j=0; j&lt;sheet.getColumns(); j++){   // loop for coloumn
+          def data =sheet.getCell(j,i).getContents() // Read Data from Excel
+          log.info data
+
+       // Set property values for desired Test case
+      def prop =  testRunner.testCase.testSuite
+    
+     
+     // input request data
+     
+       prop.setPropertyValue("Email_ID",'"'+sheet.getCell(0,i).getContents()+'"')      
+       prop.setPropertyValue("Action",'"'+sheet.getCell(1,i).getContents()+'"')      
+     //Expected response data
+     prop.setPropertyValue("status",sheet.getCell(2,i).getContents())       
+     }
+     // navigate to desired Test case and run
+    log.info "***************executing test for data ROW**************" + i
+      //def tCase = testcase
+      def tStep = testRunner.testCase.getTestStepByName("DeleteUser")
+     log.info("Executing SOAP Request for DeleteUser"+tStep)
+     tStep.run(testRunner, context)
+    // Reading response data
+    log.info("Reading response data")
+    def response = tStep.getPropertyValue("Response");
+    log.info(response)
+//   // def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+myTestSuite.setPropertyValue( myTestCase.toString(),response);
+// 
+//  
+  }
+//   
+//
+//
+//wb.close()
+////log.info "End of Execution"</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="SetPropertyValues" id="3ef1207b-79bb-4c6f-8a85-a7d6cf5ff773" disabled="true">
+        <con:settings/>
+        <con:config>
+          <delay>2000</delay>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="DeleteUser" id="840f47de-db37-4855-8e9a-9dfd3fbfa832">
+        <con:settings/>
+        <con:config service="http://10.131.168.50" resourcePath="/RallyHealth/api/RHLastpass" methodName="UserDetails" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="DeleteUser" id="b8480bae-442a-48d3-aeae-0cc01cd8090d" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://10.131.168.50</con:endpoint>
+            <con:request>{
+  "Email_ID":${#TestSuite#Email_ID},
+  "Action":${#TestSuite#Action}
+}</con:request>
+            <con:originalUri>http://10.131.168.50/RallyHealth/api/RHLastpass</con:originalUri>
+            <con:assertion type="Sensitive Information Exposure" id="87c4d2a0-9ffc-460c-9ebf-545b1c0cc0d3" name="Sensitive Information Exposure">
+              <con:configuration>
+                <IncludeProjectSpecific>true</IncludeProjectSpecific>
+                <IncludeGlobal>true</IncludeGlobal>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="deca3c2b-b25e-492b-a71a-94b1e9f28dba" name="Response SLA">
+              <con:configuration>
+                <SLA>5000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="GroovyScriptAssertion" id="0bc60239-49d2-4482-a13e-ac7eaf3c66b1" name="Script Assertion">
+              <con:configuration>
+                <scriptText>import groovy.json.JsonSlurper 
+
+def response = messageExchange.response.responseContent
+def jsonSlurper = new JsonSlurper()
+def object = jsonSlurper.parseText(response)
+
+
+
+
+
+
+
+
+// TC-1
+log.info ("               TC-1: To Verify Status in  Response       ")
+def ActualName =  object.status.toString()
+def ExpectedName=context.expand('${#TestSuite#status}')
+assert ActualName==ExpectedName
+log.info ("               Expected:    "+ExpectedName)
+log.info ("               Actual:    "+ActualName)
+log.info ("*************Assertion-1 Pass*****************")</scriptText>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Schema Compliance" id="2a58de45-2bb8-47cd-b7b3-51771f412106" name="Schema Compliance">
+              <con:configuration>
+                <definition>http://10.131.168.50</definition>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Valid HTTP Status Codes" id="6bcc5587-4e5c-450a-8dde-7ff0ef872157" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Count" id="d21f70e5-841b-4908-a7ef-f2b1d7fee773" name="JsonPath Count">
+              <con:configuration>
+                <path>$.status</path>
+                <content>1</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Existence Match" id="0c68ac98-52a0-477b-a860-d57df898c555" name="JsonPath Existence Match">
+              <con:configuration>
+                <path>$.</path>
+                <content>true</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Invalid HTTP Status Codes" id="1d630d66-53bf-4fb4-bafb-3de8dd7f4f63" name="Invalid HTTP Status Codes">
+              <con:configuration>
+                <codes>300,400,500,502</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="delay" name="Verify Response" id="b4b34035-e978-4a57-8e08-aef8dc1fd1f2" disabled="true">
+        <con:settings/>
+        <con:config>
+          <delay>2000</delay>
+        </con:config>
+      </con:testStep>
+      <con:tearDownScript>context.runners.add( testRunner )</con:tearDownScript>
+      <con:properties>
+        <con:property>
+          <con:name>Email_ID</con:name>
+          <con:value>"maneet.singh@techwizsolution.com"</con:value>
+        </con:property>
+        <con:property>
+          <con:name>Action</con:name>
+          <con:value>"R"</con:value>
+        </con:property>
+      </con:properties>
+    </con:testCase>
+    <con:properties>
+      <con:property>
+        <con:name>Email_ID</con:name>
+        <con:value>"Test3@rsys.com"</con:value>
+      </con:property>
+      <con:property>
+        <con:name>Action</con:name>
+        <con:value>"D"</con:value>
+      </con:property>
+      <con:property>
+        <con:name>fullname</con:name>
+        <con:value>SOAP3 Ajay3</con:value>
+      </con:property>
+      <con:property>
+        <con:name>First_Name</con:name>
+        <con:value>"UpdateSOAP"</con:value>
+      </con:property>
+      <con:property>
+        <con:name>Last_Name</con:name>
+        <con:value>"Test"</con:value>
+      </con:property>
+      <con:property>
+        <con:name>Staus</con:name>
+        <con:value>OK</con:value>
+      </con:property>
+      <con:property>
+        <con:name>AddUserDetails</con:name>
+        <con:value>{"status":"OK"}</con:value>
+      </con:property>
+      <con:property>
+        <con:name>FetchUserDetails</con:name>
+        <con:value>{"Users":{"190337218":{"username":"test3@rsys.com","fullname":"SOAP3 Ajay3","mpstrength":"0","created":"2018-05-21 02:13:47","last_pw_change":"2018-05-21 02:13:47","last_login":"","disabled":false,"admin":false,"neverloggedin":false,"totalscore":null,"duousername":null,"sites":null,"notes":null,"formfills":null,"applications":null,"attachments":null}}}</con:value>
+      </con:property>
+      <con:property>
+        <con:name>Status</con:name>
+        <con:value>OK</con:value>
+      </con:property>
+      <con:property>
+        <con:name>UpdateUserDetails</con:name>
+        <con:value>{"status":"OK"}</con:value>
+      </con:property>
+      <con:property>
+        <con:name>DeleteUser</con:name>
+        <con:value>{"status":"OK"}</con:value>
+      </con:property>
+    </con:properties>
+    <con:setupScript>context.runners = []</con:setupScript>
+    <con:tearDownScript>import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+import com.eviware.soapui.impl.wsdl.teststeps.*
+
+def projectpath = context.expand('${projectDir}')
+log.info "Report Location:"+context.expand('${projectDir}')
+def extent = new ExtentReports(projectpath+"\\Reports\\TestReport.html",true)
+
+
+
+
+
+for( runner in context.runners )
+    //  log.info runner.getName()
+      log.info runner.status
+testSuite.testCaseList.each {
+   log.info "Test Case : ${it.name}"
+   def extentTest = extent.startTest("Test Case : ${it.name}")
+   
+   it.testStepList.each {
+      log.info "Test Step : ${it.name}"
+      extentTest.log(LogStatus.INFO, "Test Step : ${it.name}")
+   }
+
+    if(runner.status.toString().contains("FINISHED")){
+
+      
+      extentTest.log(LogStatus.INFO,runner.status.toString())
+      extentTest.log(LogStatus.PASS, "Test PASS")
+       extentTest.log(LogStatus.PASS,"Response=>    "+testSuite.getPropertyValue("${it.name}").toString()) 
+       
+    	
+    }else{
+    	extentTest.log(LogStatus.INFO,runner.status.toString())
+    	extentTest.log(LogStatus.FAIL, "Test FAIL")
+    	extentTest.log(LogStatus.FAIL,"Response=>    "+testSuite.getPropertyValue("${it.name}").toString()) 
+    }
+  
+extent.flush()
+//Get the value of Property1
+log.info("Response Value of Request-1: " + testSuite.getPropertyValue("AddUserDetails"))
+log.info("Response Value of Request-2: " + testSuite.getPropertyValue("FetchuserDetails"))
+log.info("Response Value of Request-3: " + testSuite.getPropertyValue("UpdateUserDetails"))
+log.info("Response Value of Request-4: " + testSuite.getPropertyValue("UpdateUserDetails"))
+}
+
+//log.info("Demonstrating the object type provided by the runner variable")
+//log.info(runner.toString())
+////Getting the runner's test suite
+//tsMySuite = runner.getTestSuite()
+//log.info("Name of Test Suite is " + tsMySuite.getName())
+////Get test suite run start time
+//tsStart = runner.getStartTime()
+////Convert from long to date format and display
+//startTime = new Date(tsStart)
+//log.info(startTime)
+////Display test suite status
+//log.info(runner.getStatus())
+//
+//log.info("Get test suite status")
+//log.info(runner.getStatus())
+////Get test suite time taken
+//tsTimeTaken = runner.getTimeTaken()
+//log.info("Time Taken: " + tsTimeTaken + "ms")
+////Get results as List of TestCaseRunners
+//lstTCRunners = runner.getResults()
+////Iterate through test case runners to get test case info and statuses
+//for(tcr in lstTCRunners){
+// log.info("Test case name: " + tcr.getTestCase().getName())
+// log.info("Test case status: " + tcr.getStatus())
+//}</con:tearDownScript>
+  </con:testSuite>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:sensitiveInformation/>
+</con:soapui-project>

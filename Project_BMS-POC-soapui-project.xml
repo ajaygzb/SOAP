@@ -1,0 +1,1448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="19e6a65d-e136-4663-9e89-3f55850eff0e" activeEnvironment="Default" name="BMS_POC_DEMO" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export All" value="true"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="SomokeSuite"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="true"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="false"/>
+</xml-fragment>]]></con:setting>
+  </con:settings>
+  <con:interface xsi:type="con:WsdlInterface" id="971739b0-83df-402b-8162-9fc2ee776832" wsaVersion="NONE" name="BasicHttpBinding_IOutputService" type="wsdl" bindingName="{http://tempuri.org/}BasicHttpBinding_IOutputService" soapVersion="1_1" anonymous="optional" definition="file:/C:/Users/ajay.kumar4/Desktop/WSDL/OutputService.svc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart="file:/C:/Users/ajay.kumar4/Desktop/WSDL/OutputService.svc">
+      <con:part>
+        <con:url>file:/C:/Users/ajay.kumar4/Desktop/WSDL/OutputService.svc</con:url>
+        <con:content><![CDATA[<wsdl:definitions name="OutputService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/RfOutputWs"/>
+      <xs:element name="GenerateOutputPreview">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="noteId" type="xs:int"/>
+            <xs:element minOccurs="0" name="compId" type="xs:int"/>
+            <xs:element minOccurs="0" name="userId" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GenerateOutputPreviewResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GenerateOutputPreviewResult" nillable="true" type="q1:OutputNote" xmlns:q1="http://schemas.datacontract.org/2004/07/RfOutputWs"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RegenerateOutputReport">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="noteId" type="xs:int"/>
+            <xs:element minOccurs="0" name="compId" type="xs:int"/>
+            <xs:element minOccurs="0" name="userId" type="xs:int"/>
+            <xs:element minOccurs="0" name="attachmentIdList" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="RegenerateOutputReportResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="RegenerateOutputReportResult" nillable="true" type="q2:OutputNote" xmlns:q2="http://schemas.datacontract.org/2004/07/RfOutputWs"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GenerateReport">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="noteId" type="xs:int"/>
+            <xs:element minOccurs="0" name="reportId" type="xs:int"/>
+            <xs:element minOccurs="0" name="templateId" type="xs:int"/>
+            <xs:element minOccurs="0" name="compId" type="xs:int"/>
+            <xs:element minOccurs="0" name="userId" type="xs:int"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GenerateReportResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="GenerateReportResult" nillable="true" type="q3:OutputNote" xmlns:q3="http://schemas.datacontract.org/2004/07/RfOutputWs"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:element name="anyType" nillable="true" type="xs:anyType"/>
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI"/>
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary"/>
+      <xs:element name="boolean" nillable="true" type="xs:boolean"/>
+      <xs:element name="byte" nillable="true" type="xs:byte"/>
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime"/>
+      <xs:element name="decimal" nillable="true" type="xs:decimal"/>
+      <xs:element name="double" nillable="true" type="xs:double"/>
+      <xs:element name="float" nillable="true" type="xs:float"/>
+      <xs:element name="int" nillable="true" type="xs:int"/>
+      <xs:element name="long" nillable="true" type="xs:long"/>
+      <xs:element name="QName" nillable="true" type="xs:QName"/>
+      <xs:element name="short" nillable="true" type="xs:short"/>
+      <xs:element name="string" nillable="true" type="xs:string"/>
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte"/>
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt"/>
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong"/>
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort"/>
+      <xs:element name="char" nillable="true" type="tns:char"/>
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int"/>
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration"/>
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?"/>
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S"/>
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid"/>
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName"/>
+      <xs:attribute name="Id" type="xs:ID"/>
+      <xs:attribute name="Ref" type="xs:IDREF"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/RfOutputWs" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/RfOutputWs">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/BO"/>
+      <xs:complexType name="OutputNote">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OutputMessage" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="OutputResult" nillable="true" type="q1:NDataOutput" xmlns:q1="http://schemas.datacontract.org/2004/07/BO"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="OutputNote" nillable="true" type="tns:OutputNote"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/BO" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/BO" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/EFwk.Models"/>
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xs:complexType name="NDataOutput">
+        <xs:complexContent mixed="false">
+          <xs:extension base="q1:EBO" xmlns:q1="http://schemas.datacontract.org/2004/07/EFwk.Models">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="AppendImageIndexes" nillable="true" type="tns:ArrayOfImageIndexInfo"/>
+              <xs:element minOccurs="0" name="BpTemplateIdList" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="BpTemplateIdList_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="CaseId" type="q1:ELookup"/>
+              <xs:element minOccurs="0" name="CaseId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="CompanyId" type="q1:ELookup"/>
+              <xs:element minOccurs="0" name="CompanyId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="CreatedBy" type="q1:ELookup"/>
+              <xs:element minOccurs="0" name="CreatedBy_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime"/>
+              <xs:element minOccurs="0" name="CreatedDate_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="DateOfService" nillable="true" type="xs:dateTime"/>
+              <xs:element minOccurs="0" name="DateOfService_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="Debug" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="Debug_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="Duration" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="Duration_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="FinalOutput" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="FinalOutput_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="GenStatus" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="GenStatus_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="GenType" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="GenType_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="ImageCollectionId" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="ImageCollectionId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="ImageIndexId" type="q1:ELookup"/>
+              <xs:element minOccurs="0" name="ImageIndexId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="IsAuto" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="IsAuto_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="KeyGuid" type="ser:guid"/>
+              <xs:element minOccurs="0" name="KeyGuid_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="NDataOutputId" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="NDataOutputId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="NReportDocTemplateId" type="q1:ELookup"/>
+              <xs:element minOccurs="0" name="NReportDocTemplateId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="NReportId" type="q1:ELookup"/>
+              <xs:element minOccurs="0" name="NReportId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="NReportTemplateId" type="q1:ELookup"/>
+              <xs:element minOccurs="0" name="NReportTemplateId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="Name_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="NoteId" type="q1:ELookup"/>
+              <xs:element minOccurs="0" name="NoteId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="NoteTypeString" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="NoteTypeString_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="Status" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="StatusString" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="StatusString_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="Status_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="UpdatedBy" type="q1:ELookup"/>
+              <xs:element minOccurs="0" name="UpdatedBy_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="UpdatedDate" nillable="true" type="xs:dateTime"/>
+              <xs:element minOccurs="0" name="UpdatedDate_HasData" type="xs:boolean"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="NDataOutput" nillable="true" type="tns:NDataOutput"/>
+      <xs:complexType name="ArrayOfImageIndexInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ImageIndexInfo" nillable="true" type="tns:ImageIndexInfo"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfImageIndexInfo" nillable="true" type="tns:ArrayOfImageIndexInfo"/>
+      <xs:complexType name="ImageIndexInfo">
+        <xs:complexContent mixed="false">
+          <xs:extension base="q2:EBO" xmlns:q2="http://schemas.datacontract.org/2004/07/EFwk.Models">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CaseId" type="q2:ELookup"/>
+              <xs:element minOccurs="0" name="CaseId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="CompanyId" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="CompanyId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="CompanyImageNum" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="CompanyImageNum_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="CreatedDate" nillable="true" type="xs:dateTime"/>
+              <xs:element minOccurs="0" name="CreatedDate_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="DocumentDate" nillable="true" type="xs:dateTime"/>
+              <xs:element minOccurs="0" name="DocumentDate_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="ImageBatchId" type="q2:ELookup"/>
+              <xs:element minOccurs="0" name="ImageBatchId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="ImageCategoryId" type="q2:ELookup"/>
+              <xs:element minOccurs="0" name="ImageCategoryId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="ImageExtension" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="ImageExtension_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="ImageFormId" type="q2:ELookup"/>
+              <xs:element minOccurs="0" name="ImageFormId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="ImageIndexId" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="ImageIndexId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="ImageName" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="ImageName_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="ImagePath" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="ImagePath_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="IndexMethod" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="IndexMethod_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="IndexedDate" nillable="true" type="xs:dateTime"/>
+              <xs:element minOccurs="0" name="IndexedDate_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="IsActive" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="IsActive_FIELD_DUP" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="IsActive_FIELD_DUP_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="IsActive_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="IsIndexed" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="IsIndexed_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="IsLabel" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="IsLabel_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="IsTemplate" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="IsTemplate_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="LabelTemplateCd" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="LabelTemplateCd_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="LabelTemplateName" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="LabelTemplateName_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="NoteId" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="NoteId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="OrigCaseId" type="q2:ELookup"/>
+              <xs:element minOccurs="0" name="OrigCaseId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="PageNumber" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="PageNumber_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="PatientId" type="q2:ELookup"/>
+              <xs:element minOccurs="0" name="PatientId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="PatientLabels" nillable="true" type="tns:ArrayOfPatientLabel"/>
+              <xs:element minOccurs="0" name="PdfAdminPassword" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="PdfAdminPassword_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="PlaceOfServiceId" type="q2:ELookup"/>
+              <xs:element minOccurs="0" name="PlaceOfServiceId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="StartPosition" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="StartPosition_HasData" type="xs:boolean"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="ImageIndexInfo" nillable="true" type="tns:ImageIndexInfo"/>
+      <xs:complexType name="ArrayOfPatientLabel">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="PatientLabel" nillable="true" type="tns:PatientLabel"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfPatientLabel" nillable="true" type="tns:ArrayOfPatientLabel"/>
+      <xs:complexType name="PatientLabel">
+        <xs:complexContent mixed="false">
+          <xs:extension base="q3:EBO" xmlns:q3="http://schemas.datacontract.org/2004/07/EFwk.Models">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="CaseId" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="CaseId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="CompanyId" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="CompanyId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="NumLabels" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="NumLabels_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="PatientFname" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="PatientFname_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="PatientId" nillable="true" type="xs:int"/>
+              <xs:element minOccurs="0" name="PatientId_HasData" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="PatientLname" nillable="true" type="xs:string"/>
+              <xs:element minOccurs="0" name="PatientLname_HasData" type="xs:boolean"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="PatientLabel" nillable="true" type="tns:PatientLabel"/>
+    </xs:schema>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EFwk.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/EFwk.Models">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xs:complexType name="EBO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Selected" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="EBO" nillable="true" type="tns:EBO"/>
+      <xs:complexType name="ELookup">
+        <xs:annotation>
+          <xs:appinfo>
+            <IsValueType xmlns="http://schemas.microsoft.com/2003/10/Serialization/">true</IsValueType>
+          </xs:appinfo>
+        </xs:annotation>
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Id" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ELookup" nillable="true" type="tns:ELookup"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IOutputService_GenerateOutputPreview_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateOutputPreview"/>
+  </wsdl:message>
+  <wsdl:message name="IOutputService_GenerateOutputPreview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateOutputPreviewResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IOutputService_RegenerateOutputReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegenerateOutputReport"/>
+  </wsdl:message>
+  <wsdl:message name="IOutputService_RegenerateOutputReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegenerateOutputReportResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IOutputService_GenerateReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateReport"/>
+  </wsdl:message>
+  <wsdl:message name="IOutputService_GenerateReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateReportResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IOutputService">
+    <wsdl:operation name="GenerateOutputPreview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutputService/GenerateOutputPreview" message="tns:IOutputService_GenerateOutputPreview_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutputService/GenerateOutputPreviewResponse" message="tns:IOutputService_GenerateOutputPreview_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RegenerateOutputReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutputService/RegenerateOutputReport" message="tns:IOutputService_RegenerateOutputReport_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutputService/RegenerateOutputReportResponse" message="tns:IOutputService_RegenerateOutputReport_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOutputService/GenerateReport" message="tns:IOutputService_GenerateReport_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IOutputService/GenerateReportResponse" message="tns:IOutputService_GenerateReport_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOutputService" type="tns:IOutputService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GenerateOutputPreview">
+      <soap:operation soapAction="http://tempuri.org/IOutputService/GenerateOutputPreview" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegenerateOutputReport">
+      <soap:operation soapAction="http://tempuri.org/IOutputService/RegenerateOutputReport" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateReport">
+      <soap:operation soapAction="http://tempuri.org/IOutputService/GenerateReport" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OutputService">
+    <wsdl:port name="BasicHttpBinding_IOutputService" binding="tns:BasicHttpBinding_IOutputService">
+      <soap:address location="http://10.131.168.19:8080/OutputService.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+        <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+      </con:part>
+    </con:definitionCache>
+    <con:endpoints>
+      <con:endpoint>http://10.131.168.19:8080/OutputService.svc</con:endpoint>
+    </con:endpoints>
+    <con:operation id="e6b4a6d4-a61c-4db9-a450-7da537606b82" isOneWay="false" action="http://tempuri.org/IOutputService/GenerateOutputPreview" name="GenerateOutputPreview" bindingOperationName="GenerateOutputPreview" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="81b812f4-447a-4108-a8e5-9647f14c9dce" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://10.131.168.19:8080/OutputService.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GenerateOutputPreview>\r
+         <!--Optional:-->\r
+         <tem:noteId>?</tem:noteId>\r
+         <!--Optional:-->\r
+         <tem:compId>?</tem:compId>\r
+         <!--Optional:-->\r
+         <tem:userId>?</tem:userId>\r
+      </tem:GenerateOutputPreview>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IOutputService/GenerateOutputPreview"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="dd32dea6-927a-4e9a-992e-313be07c0a02" isOneWay="false" action="http://tempuri.org/IOutputService/GenerateReport" name="GenerateReport" bindingOperationName="GenerateReport" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="0a8561c5-d7b5-46a5-8c01-e30ea7027965" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://10.131.168.19:8080/OutputService.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GenerateReport>\r
+         <!--Optional:-->\r
+         <tem:noteId>?</tem:noteId>\r
+         <!--Optional:-->\r
+         <tem:reportId>?</tem:reportId>\r
+         <!--Optional:-->\r
+         <tem:templateId>?</tem:templateId>\r
+         <!--Optional:-->\r
+         <tem:compId>?</tem:compId>\r
+         <!--Optional:-->\r
+         <tem:userId>?</tem:userId>\r
+      </tem:GenerateReport>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IOutputService/GenerateReport"/>
+      </con:call>
+    </con:operation>
+    <con:operation id="ae6970fb-f11b-4483-b161-cecf57dd9db9" isOneWay="false" action="http://tempuri.org/IOutputService/RegenerateOutputReport" name="RegenerateOutputReport" bindingOperationName="RegenerateOutputReport" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
+      <con:settings/>
+      <con:call id="a34132d5-f823-44a7-ba2c-729bc5ebd751" name="Request 1">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://10.131.168.19:8080/OutputService.svc</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:RegenerateOutputReport>\r
+         <!--Optional:-->\r
+         <tem:noteId>?</tem:noteId>\r
+         <!--Optional:-->\r
+         <tem:compId>?</tem:compId>\r
+         <!--Optional:-->\r
+         <tem:userId>?</tem:userId>\r
+         <!--Optional:-->\r
+         <tem:attachmentIdList>?</tem:attachmentIdList>\r
+      </tem:RegenerateOutputReport>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/IOutputService/RegenerateOutputReport"/>
+      </con:call>
+    </con:operation>
+  </con:interface>
+  <con:testSuite id="865d9650-d41f-4885-90f2-be1621374713" name="SomokeSuite">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="9f8fce4f-51eb-4e56-976d-0ca1d2d9c44d" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="LoginBMS" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="groovy" name="LoginData" id="13841320-f1c9-454f-81ff-a4e7b0b66842">
+        <con:settings/>
+        <con:config>
+          <script>import java.io.File
+import java.util.Date
+import jxl.*
+
+import groovy.xml.MarkupBuilder
+import org.custommonkey.xmlunit.*
+import com.eviware.soapui.support.GroovyUtils;
+
+def projectpath = context.expand('${projectDir}')
+
+
+
+
+    //read excelfile
+    wb = Workbook.getWorkbook(new File(projectpath+'/Data/SOAPdata.xls'))
+    sheet = wb.getSheet(3)   // Select desired Sheet for External Excel data 
+    //log.info "Rows    "+sheet.getRows()
+   // log.info "Columns   "+sheet.getColumns()
+     
+        
+        
+        for (int i=1; i&lt;sheet.getRows();i++) {    // loop for row
+        	log.info ("Setting Property Values for test at Suite level...")
+        	log.info ("Getting Data from Excel Row:    "+i)
+      for (int j=0; j&lt;sheet.getColumns(); j++){   // loop for coloumn
+          def data =sheet.getCell(j,i).getContents() // Read Data from Excel
+       // Set property values for desired Test case
+      def prop =  testRunner.testCase.testSuite
+    
+     
+     // input request data
+     
+     prop.setPropertyValue("UserName",sheet.getCell(0,i).getContents()) 
+      
+     prop.setPropertyValue("Password",sheet.getCell(1,i).getContents()) 
+   
+     
+     
+     
+     //Output response data
+     prop.setPropertyValue("userId",sheet.getCell(2,i).getContents()) 
+  
+     prop.setPropertyValue("companyId",sheet.getCell(3,i).getContents()) 
+       
+     prop.setPropertyValue("gpmsCode",sheet.getCell(4,i).getContents()) 
+  
+     prop.setPropertyValue("providerId",sheet.getCell(5,i).getContents()) 
+     
+     prop.setPropertyValue("status",sheet.getCell(6,i).getContents()) 
+        
+     }
+     // navigate to desired Test case and run
+   //  log.info "***************executing test for data ROW**************" + i
+    // def tCase = testcase
+     def tStep = testRunner.testCase.getTestStepByName("Login")
+     log.info("Executing SOAP Request for Login")
+     tStep.run(testRunner, context)
+     def result = testRunner.getStatus().toString()
+     log.info result
+      if (result == "FINISHED") {
+      log.info("Test passed")
+     } else {
+      log.info("Test not passed")
+    }
+    // Reading response data
+    log.info("Reading response data")
+    def response = tStep.getPropertyValue("Response");
+   // def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+ 
+  
+   }
+   
+
+
+wb.close()
+//log.info "End of Execution"</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="httprequest" name="Login" id="34388b3c-3736-4860-a743-d7ea40d9f677">
+        <con:settings/>
+        <con:config method="POST" xsi:type="con:HttpRequest" id="2e32cd99-3503-46dd-8e5d-a0571ae23eb2" name="Login" postQueryString="false" mediaType="application/json" sslKeystore="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://r5qagoldapi.revflow.com/authentication/authenticate</con:endpoint>
+          <con:request>{"username":"${#TestSuite#UserName}","password":"${#TestSuite#Password}"}</con:request>
+          <con:assertion type="GroovyScriptAssertion" id="ce27cedb-6157-499b-aaca-b67a2e758dea" name="Script Assertion">
+            <con:configuration>
+              <scriptText>import groovy.json.JsonSlurper 
+
+def response = messageExchange.response.responseContent
+def jsonSlurper = new JsonSlurper()
+def object = jsonSlurper.parseText(response)
+def mytest =[]
+
+
+// TC-1
+log.info ("               TC-1: To Verify User ID in Login Response       ")
+def ActualUserId=object.data.userId.toString()
+def ExpectedUserId=context.expand('${#TestSuite#userId}')
+assert ActualUserId==ExpectedUserId
+log.info ("               Expected:    "+ExpectedUserId)
+log.info ("               Actual:    "+ActualUserId)
+log.info ("*************Assertion-1 Pass*****************")
+
+// TC-2
+log.info ("               TC-2: To Verify Company ID in Login Response       ")
+def ActualcompanyId=object.data.companyId.toString()
+def ExpectedcompanyId=context.expand('${#TestSuite#companyId}')
+assert ActualcompanyId==ExpectedcompanyId
+log.info ("               Expected:    "+ExpectedcompanyId)
+log.info ("               Actual:    "+ActualcompanyId)
+log.info ("*************Assertion-2 Pass*****************")
+
+
+// TC-3
+log.info ("               TC-3: To Verify gpmsCode in Login Response       ")
+def ActualgpmsCode=object.data.gpmsCode.toString()
+def ExpectedgpmsCode=context.expand('${#TestSuite#gpmsCode}')
+assert ActualgpmsCode==ExpectedgpmsCode
+log.info ("               Expected:    "+ExpectedgpmsCode)
+log.info ("               Actual:    "+ActualgpmsCode)
+log.info ("*************Assertion-3 Pass*****************")
+
+
+// TC-4
+log.info ("               TC-4: To Verify providerId in Login Response       ")
+def ActualproviderId=object.data.providerId.toString()
+def ExpectedproviderId=context.expand('${#TestSuite#providerId}')
+assert ActualproviderId==ExpectedproviderId
+log.info ("               Expected:    "+ExpectedproviderId)
+log.info ("               Actual:    "+ActualproviderId)
+def resulter = ActualproviderId.trim() == ExpectedproviderId.trim();
+log.info ("*************Assertion-4 Pass*****************")
+
+// TC-5
+log.info ("               TC-5: To Verify status in Login Response       ")
+def Actualstatus=object.status.toString()
+def Expectedstatus=context.expand('${#TestSuite#status}')
+assert Actualstatus==Expectedstatus
+log.info ("               Expected:    "+Expectedstatus)
+log.info ("               Actual:    "+Actualstatus)
+log.info ("*************Assertion-5 Pass*****************")
+sleep(2000)</scriptText>
+            </con:configuration>
+          </con:assertion>
+          <con:assertion type="JsonPath Count" id="eacfa190-639e-43c5-85c0-03de0230cc04" name="JsonPath Count">
+            <con:configuration>
+              <path>$.data.*</path>
+              <content>20</content>
+              <allowWildcards>false</allowWildcards>
+              <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+              <ignoreComments>false</ignoreComments>
+            </con:configuration>
+          </con:assertion>
+          <con:assertion type="Simple Contains" id="f03c3d0a-8561-4de7-a6fc-01e41fc79640" name="Contains">
+            <con:configuration>
+              <token>ZZX</token>
+              <ignoreCase>false</ignoreCase>
+              <useRegEx>false</useRegEx>
+            </con:configuration>
+          </con:assertion>
+          <con:assertion type="JsonPath Count" id="77addd8a-f2ac-49ff-8902-da138b93d67b">
+            <con:configuration/>
+          </con:assertion>
+          <con:assertion type="JsonPath Existence Match" id="fad4ba51-d986-4caf-a126-51cc41094b85" name="JsonPath Existence Match">
+            <con:configuration>
+              <path>$.data.providerId</path>
+              <content>true</content>
+              <allowWildcards>false</allowWildcards>
+              <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+              <ignoreComments>false</ignoreComments>
+            </con:configuration>
+          </con:assertion>
+          <con:assertion type="JsonPath Match" id="ed3ce2cc-8f31-40a9-939f-5a12267a3807" name="JsonPath Match">
+            <con:configuration>
+              <path>data.loginStatus</path>
+              <content>1</content>
+              <allowWildcards>false</allowWildcards>
+              <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+              <ignoreComments>false</ignoreComments>
+            </con:configuration>
+          </con:assertion>
+          <con:assertion type="JsonPath RegEx Match" id="04a8b89c-16ab-4817-86bc-0a3ee09e6708" name="JsonPath RegEx Match">
+            <con:configuration/>
+          </con:assertion>
+          <con:assertion type="Valid HTTP Status Codes" id="d130fa9e-6581-404e-957e-8ec433b83a17" name="Valid HTTP Status Codes">
+            <con:configuration>
+              <codes>200</codes>
+            </con:configuration>
+          </con:assertion>
+          <con:assertion type="HTTP Download all resources" id="37f40f59-2216-4ca4-9408-d8289a0aebeb" name="HTTP Download all resources"/>
+          <con:assertion type="Response SLA Assertion" id="1bf43747-fecf-4efc-b101-0d0474a5abea" name="Response SLA">
+            <con:configuration>
+              <SLA>30000</SLA>
+            </con:configuration>
+          </con:assertion>
+          <con:assertion type="Sensitive Information Exposure" id="4ef5dac2-6868-416b-a1bc-e139b80064e8" name="Sensitive Information Exposure">
+            <con:configuration>
+              <IncludeProjectSpecific>true</IncludeProjectSpecific>
+              <IncludeGlobal>true</IncludeGlobal>
+            </con:configuration>
+          </con:assertion>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:config>
+      </con:testStep>
+      <con:setupScript>//Clear Script Logs
+try{
+com.eviware.soapui.SoapUI.logMonitor.getLogArea("script log").clear()
+//## Get TestSuite name ##//
+def TSName = testRunner.testCase.name
+def LogFile = TSName + "-Logs.txt"
+def project = testRunner.testCase.testSuite.project
+project.setPropertyValue("LogFilePath",context.expand('${projectDir}')+"/Data")
+def projectPath = context.expand('${#Project#LogFilePath}')
+//Get LogFile directory and Construct LogFile
+def LogFilePath = projectPath.toString() +"\\logs\\"+LogFile
+
+LogFile = LogFilePath + LogFile
+def LogFiles = new File(LogFile)
+log.info "Clearing previous logs..."
+
+LogFiles.delete()
+}catch(Exception e) {
+   log.info "Could not get Logs"
+}</con:setupScript>
+      <con:tearDownScript>testCase.setPropertyValue("testCaseStatus", testRunner.status.toString())</con:tearDownScript>
+      <con:properties>
+        <con:property>
+          <con:name>testCaseStatus</con:name>
+          <con:value>FINISHED</con:value>
+        </con:property>
+      </con:properties>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>c6414246-3e66-4055-84a0-ca25c7149429</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>2bba3a01-56cb-4a86-9eb4-bf54805766a5</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="847ce858-43ff-462a-a9ad-297e47b855b2" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="AddPatient" searchProperties="true">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.panels.testcase.JTestRunLog$OptionsForm@max_rows">0</con:setting>
+        <con:setting id="com.eviware.soapui.impl.wsdl.panels.testcase.JTestRunLog$OptionsForm@errors_only">false</con:setting>
+      </con:settings>
+      <con:testStep type="httprequest" name="GetToken" id="5d97ba7f-beb6-445c-9873-5f876b58a3b2">
+        <con:settings/>
+        <con:config method="POST" xsi:type="con:HttpRequest" id="8a83fc37-f127-424b-9922-48ff97e5a3d9" name="GetToken" postQueryString="false" mediaType="application/json" timeout="" sslKeystore="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@bind_address"/>
+          </con:settings>
+          <con:encoding xsi:nil="true"/>
+          <con:endpoint>https://r5qagoldauth.revflow.com/token</con:endpoint>
+          <con:request><![CDATA[grant_type=password&username=${#TestSuite#UserName}&password=${#TestSuite#Password}
+&uid=${#TestSuite#userId}&companyid=${#TestSuite#companyId}&userTypeId=1&userTypeR3Id=1
+&providerId=${#testSuite#providerId}&providerTypeId=1]]></con:request>
+          <con:assertion type="Valid HTTP Status Codes" id="909ca7d1-87bd-4e1b-aaeb-8fad51e859d2" name="Valid HTTP Status Codes">
+            <con:configuration>
+              <codes>200</codes>
+            </con:configuration>
+          </con:assertion>
+          <con:assertion type="Simple Contains" id="1a6e7034-4038-40d8-aeb5-0e4b8349973d" name="Contains">
+            <con:configuration>
+              <token>access_token</token>
+              <ignoreCase>false</ignoreCase>
+              <useRegEx>false</useRegEx>
+            </con:configuration>
+          </con:assertion>
+          <con:assertion type="JsonPath Count" id="8de5ac27-1c12-4cf8-98d9-8c0909723d92" name="JsonPath Count">
+            <con:configuration>
+              <path>access_token</path>
+              <content>1</content>
+              <allowWildcards>false</allowWildcards>
+              <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+              <ignoreComments>false</ignoreComments>
+            </con:configuration>
+          </con:assertion>
+          <con:assertion type="JsonPath Existence Match" id="83fb793d-2058-414d-9736-c237257e28c9" name="JsonPath Existence Match">
+            <con:configuration>
+              <path>access_token</path>
+              <content>true</content>
+              <allowWildcards>false</allowWildcards>
+              <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+              <ignoreComments>false</ignoreComments>
+            </con:configuration>
+          </con:assertion>
+          <con:assertion type="JsonPath RegEx Match" id="bc9add94-0142-40f1-8c2a-167630071f33" name="JsonPath RegEx Match">
+            <con:configuration>
+              <path>token_type</path>
+              <content>false</content>
+              <allowWildcards>false</allowWildcards>
+              <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+              <ignoreComments>false</ignoreComments>
+              <regEx>[0-9]</regEx>
+            </con:configuration>
+          </con:assertion>
+          <con:assertion type="GroovyScriptAssertion" id="2a14c8d8-142d-47d9-a38f-0787da2e448b" name="Script Assertion">
+            <con:configuration>
+              <scriptText>import groovy.json.JsonSlurper 
+
+def response = messageExchange.response.responseContent
+def jsonSlurper = new JsonSlurper()
+def object = jsonSlurper.parseText(response)
+
+assert object.access_token!=null
+assert object.access_token!=null
+assert object.token_type == "bearer"
+assert object.expires_in == 1799
+assert object.MinutesInterval == 1800
+assert object.containsKey('refresh_token')</scriptText>
+            </con:configuration>
+          </con:assertion>
+          <con:credentials>
+            <con:username/>
+            <con:domain/>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Set header" id="151ccadc-1702-4254-ba33-5a33bb4ed5a6">
+        <con:settings/>
+        <con:config>
+          <script>import com.eviware.soapui.support.types.StringToStringMap 
+import groovy.json.JsonSlurper
+
+
+def randomString = org.apache.commons.lang.RandomStringUtils.random(16, true, true)
+ testRunner.testCase.testSuite.setPropertyValue("PatientName","SOAP"+randomString)
+ def headers = new StringToStringMap()
+ def responseContent = testRunner.testCase.getTestStepByName("GetToken").getPropertyValue("Response")
+ def responsedata = new JsonSlurper().parseText(responseContent)
+ def token = responsedata.access_token
+ headers.put("Authorization","Bearer "+token);
+ // log.info headers 
+testRunner.testCase.testSteps["Addpatient"].getHttpRequest().setRequestHeaders(headers)
+
+
+//// get Token from Response
+//responseContent = testRunner.testCase.getTestStepByName("GetToken").getPropertyValue("Response")
+//responsedata = new JsonSlurper().parseText(responseContent)
+//log.info(responsedata.size())
+//responsedata.each{
+//	log.info(it)
+//}
+//log.info ("   "+responsedata.access_token)
+//log.info ("   "+responsedata.token_type)
+//log.info ("   "+responsedata.expires_in)
+//log.info ("   "+responsedata.refresh_token)
+//log.info ("   "+responsedata.MinutesInterval)</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="Excelread" id="d8a96f78-f447-465b-ae95-e34ad85d4868" disabled="true">
+        <con:settings/>
+        <con:config>
+          <script>import java.io.File
+import java.util.Date
+import jxl.*
+
+import groovy.xml.MarkupBuilder
+import org.custommonkey.xmlunit.*
+
+//read excelfile
+wb = Workbook.getWorkbook(new File('C:/Users/ajay.kumar4/Desktop/SOAPdata.xls'))
+
+     sheet = wb.getSheet(0)   // Select desired Sheet for External Excel data 
+    ArrayList myList = new ArrayList()
+   for (int i=1; i&lt;sheet.getRows();i++) {
+
+
+      for (int j=0; j&lt;sheet.getColumns(); j++){
+           p=sheet.getCell(j,i).getContents()
+
+      
+      log.info sheet.getCell(j,i).getContents() // Read Data from Excel
+     
+      def testcase = testRunner.testCase.testSuite.testCases["GenerateOutputPreview TestCase"] // navigate to desired Test case in project
+       // Set property values for desired Test case
+      def prop =  testcase.getTestStepByName("Properties")
+
+     // prop.setPropertyValue("AJAY","Test")
+     prop.setPropertyValue("noteID",sheet.getCell(0,i).getContents())
+     prop.setPropertyValue("compID",sheet.getCell(1,i).getContents())
+     prop.setPropertyValue("userID",sheet.getCell(2,i).getContents())
+
+     // set desired TC step from Test case
+     def tstep = testcase.testSteps["GenerateOutputPreview"]
+     log.info "Executing Test Step ******Iteration  "+i
+     
+     
+     // navigate to desired Test case and run
+     def tCase = testRunner.testCase.testSuite.testCases["GenerateOutputPreview TestCase"]
+     def tStep = tCase.testSteps["GenerateOutputPreview"]
+     tStep.run(testRunner, context)
+       
+
+
+
+
+
+
+
+
+      
+      myList.add(p)
+       }
+   }
+
+wb.close()
+log.info myList.size()</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="httprequest" name="Addpatient" id="43551ae7-8651-4805-82d3-5165c27bcf01">
+        <con:settings/>
+        <con:config method="POST" xsi:type="con:HttpRequest" id="392b10cf-d79a-432c-81e4-3649432c0133" name="Addpatient" postQueryString="false" mediaType="application/json" sslKeystore="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Bearer q_GslULizgmbyNIKCdWMLvvUKtEBwVPJvJQY8jGVAaWKO_rCZqlJp2HBC2jN7zRW4lL6MJoxgn6VE3_6xS2h9AYnx77HZ3g5ze90Iqb9S3IjZ5pHgODZTAME9URIMSZ1iBesDhXeUYYXe9CtaIPh_btrnfaL1k7nICad7FqC6sSlYXP8lanmgSpenIgX4hKv77GUc-9mwCtqd2e6_9oiijokkEho1G8gVtrVxd_4RabnhFQV7KHndBf7M_IEHTiFHcbkByvXmXHbeZQPBeHic5Ptk_geCd0Zfivx-PX-Maxx9GobAIYznxzXf5Ot-6KNTxHc6um_Xkikn-6mGBtHeMUFjg4" xmlns="http://eviware.com/soapui/config"/></con:setting>
+            <con:setting id="com.eviware.soapui.impl.support.AbstractHttpRequest@follow-redirects">true</con:setting>
+          </con:settings>
+          <con:encoding xsi:nil="true"/>
+          <con:endpoint>https://r5qagoldapi.revflow.com/patients</con:endpoint>
+          <con:request>{"isPatientStatement":true,"name":{"firstName":
+"${#TestSuite#PatientName}","lastName":"kumar"},
+"id":0,"phone":{"primary":"1","home":"1111111111"},
+"reminderType":"1","address":{"state":{},"countryId":1},
+"spokenLanguage":"EN","isActive":true,"homePhone":"",
+"emergencyContact":{"phone":{}},"totalInsuranceChargeAmount":0,
+"totalPatientChargeAmount":0,"totalChargeAmount":0,
+"totalPaymentAmount":0,"totalAdjAmount":0,"totalBalance":0,
+"collectionFlag":false,"paymentPlan":false,"tsDiscipline":492,
+"caseEffectiveDate":"04/03/2018","responsibleParty":{"address":{"countryId":1},
+"name":{},"phone":{},"sameAsPatient":false},
+"patientdateOfBirth":"2016-12-31T18:30:00.000Z",
+"gender":"M","ssn":"111111111","dateOfBirth":"01/01/2017"}</con:request>
+          <con:assertion type="Valid HTTP Status Codes" id="9ac60a94-4825-45b3-847b-292bf7b84aa2" name="Valid HTTP Status Codes">
+            <con:configuration>
+              <codes>200</codes>
+            </con:configuration>
+          </con:assertion>
+          <con:assertion type="GroovyScriptAssertion" id="087b01b2-b777-4912-9f72-70b6021021da" name="Script Assertion">
+            <con:configuration>
+              <scriptText>import groovy.json.JsonSlurper 
+
+def response = messageExchange.response.responseContent
+def jsonSlurper = new JsonSlurper()
+def object = jsonSlurper.parseText(response)
+
+assert object.data.id!=null
+assert object.messages==null
+assert object.status==1
+assert object.data.containsKey('duplicatePatients')
+messageExchange.modelItem.testStep.testCase.setPropertyValue( "Patient ID",object.data.id.toString())</scriptText>
+            </con:configuration>
+          </con:assertion>
+          <con:credentials>
+            <con:domain>{"access_token":"hb3tR5ZrCa1z7xk9xD2U6MC4RcubJJhIPx7an8jrf_skRXLSxubQefXFF1LeVEDXISJYc-EQeGA2iom0FM-USxlIyCI_zfCkeQ4gd_ku_XLktftzk7X-klm-G99r-nWAyGwi_PiAy_hn9IyQlq02Geh2yNdWhNounSRwe80N9EFF9DO7XqVShieckKxzuDl23HiL83-Tt8Pmi0NxN4dlOIbIe39Fd2yC0ubxNYdR7VGDlVKuX0DRhwdQev3SwKUdPX6YNqPCZGXfsZbQmyKjR1xF-1-b6B10zbYDU7wifMgOtWLT7Ntv2bFQcQyf0tZkZNVZEFyhutwxSG8uFPwM0k_bZ0I","token_type":"bearer","expires_in":1799,"refresh_token":"82e8bb2b-ea7d-42b3-8493-9c753c71407e","MinutesInterval":1800}</con:domain>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+            <con:addedBasicAuthenticationTypes>NTLM</con:addedBasicAuthenticationTypes>
+            <con:addedBasicAuthenticationTypes>SPNEGO/Kerberos</con:addedBasicAuthenticationTypes>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters/>
+        </con:config>
+      </con:testStep>
+      <con:setupScript>//Clear Script Logs
+try{
+com.eviware.soapui.SoapUI.logMonitor.getLogArea("script log").clear()
+//## Get TestSuite name ##//
+def TSName = testRunner.testCase.name
+def LogFile = TSName + "-Logs.txt"
+def project = testRunner.testCase.testSuite.project
+project.setPropertyValue("LogFilePath",context.expand('${projectDir}')+"/Data")
+def projectPath = context.expand('${#Project#LogFilePath}')
+//Get LogFile directory and Construct LogFile
+def LogFilePath = projectPath.toString() +"\\logs\\"+LogFile
+
+LogFile = LogFilePath + LogFile
+def LogFiles = new File(LogFile)
+log.info "Clearing previous logs..."
+
+LogFiles.delete()
+}catch(Exception e) {
+   log.info "Could not get Logs"
+}</con:setupScript>
+      <con:tearDownScript>try{
+def logArea = com.eviware.soapui.SoapUI.logMonitor.getLogArea( "script log" )
+log.info logArea
+//## Get TestSuite name ##//
+def TSName = testRunner.testCase.name
+//Get LogFile directory and Construct LogFile
+def projectPath = context.expand('${#Project#LogFilePath}')
+def FileName = TSName + "-Logs.txt"
+def LogFile = new File(projectPath.toString() +"\\logs\\"+FileName)
+LogFile.write("Generating Script logs....\r\n")
+if(logArea !=null)
+{
+def model = logArea.model
+if(model.size > 0) {
+for(c in 0..(model.size-1))
+{
+LogFile.append(model.getElementAt(c).toString() + "\r\n")
+}
+}
+}
+}catch(Exception e) {
+   log.info "Could not get Logs"
+}</con:tearDownScript>
+      <con:properties>
+        <con:property>
+          <con:name>Patient ID</con:name>
+          <con:value>2769067</con:value>
+        </con:property>
+      </con:properties>
+    </con:testCase>
+    <con:testCase id="10c49826-5593-400e-8ad0-204af3e09e4b" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GenerateOutputPreview TestCase" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="properties" name="Properties" id="58a6323b-6b48-46d6-acca-b58c7fbdf5d0">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>noteID</con:name>
+              <con:value>36963</con:value>
+            </con:property>
+            <con:property>
+              <con:name>compID</con:name>
+              <con:value>440</con:value>
+            </con:property>
+            <con:property>
+              <con:name>userID</con:name>
+              <con:value>119</con:value>
+            </con:property>
+            <con:property>
+              <con:name>expectedResult</con:name>
+              <con:value>Success</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="DataDrivenwithCSV" id="619157ef-e7e0-4416-96f3-d92a1a1db67b" disabled="true">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.xml.StreamingMarkupBuilder
+import com.eviware.soapui.support.XmlHolder
+
+def actualResult = "error" 
+def testDataSet = []
+def failureList = []
+def mytest =[]
+
+def fileName = context.expand('${#Project#datPath}')  //set path of the csv to read in
+//log.info fileName
+//log.info context.expand('${#Project#datPath}')
+
+// Opens file, iterates through each line, splits the line on the commas into an array, and adds
+// the array to testDataSet. (So testDataSet is an array of arrays).
+new File(fileName).eachLine { line -> testDataSet.add( line.split(",") ) }
+
+log.info( "Read " + testDataSet.size() + " test values from " + fileName )
+
+// If any iteration fails, it will add an entry to the failure list, and they will all be printed at the end
+context.setProperty( "failureList", failureList )
+
+// Store the test data in a property called "testData"
+context.setProperty( "testDataSet", testDataSet )
+
+def testDataSetWorker = context.getProperty("testDataSet") // Retrieve the test data from the testData property
+
+testDataSetWorker.eachWithIndex{it, index ->
+	log.info("**************test ${index + 1} start*************************")
+	def testDataLine = it // Select the current test data line
+	def props = testRunner.testCase.getTestStepByName( "Properties" )
+	props.setPropertyValue("noteId", testDataLine[0])//first element in line
+	props.setPropertyValue("compID", testDataLine[1])//second element in line
+	props.setPropertyValue("userID", testDataLine[2])
+	props.setPropertyValue("expectedResult", testDataLine[3])
+	def expectedResult = context.expand( '${Properties#expectedResult}' )
+
+	//make request
+	testRunner.runTestStepByName( "GenerateOutputPreview" )
+
+	//handle the response
+def response = context.expand( '${GenerateOutputPreview#Response}' )
+def holder = new XmlHolder(response);
+actualResult = holder.getNodeValue("//a:OutputMessage")
+log.info("*************Fetch actual Result *****************************"+actualResult)
+
+// log.info context.expand('${projectDir}')  project DIR
+
+
+
+
+
+
+     //actualResult ="Success"
+ 	log.info("actual result in XML = " + actualResult.trim() )
+	log.info("expected result in file = " + expectedResult.trim() )
+	def resulter = actualResult.trim() == expectedResult.trim();
+	assert actualResult.trim() == expectedResult.trim(); 
+ 	log.info("Result as expected = ${actualResult.trim() == expectedResult.trim()}")
+ 	mytest.add("${actualResult.trim()},${expectedResult.trim()},${resulter}");
+	log.info("**************test ${index + 1} done*************************")
+
+}
+
+//create a new file each run,with a timestamp to make the name unique
+def stamp = new Date().format("yyyyMMdd'T'HHmmssSSS"); 
+new File("c:\\data\\GOPout${stamp.toString()}.csv").withWriter { out ->
+  mytest.each {
+    out.println it
+    }
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="DatadrivenWithExcel" id="6615c27a-bc6c-4066-aae8-a4740f13adfd">
+        <con:settings/>
+        <con:config>
+          <script>import java.io.File
+import java.util.Date
+import jxl.*
+
+import groovy.xml.MarkupBuilder
+import org.custommonkey.xmlunit.*
+import com.eviware.soapui.support.GroovyUtils;
+
+    //read excelfile
+    wb = Workbook.getWorkbook(new File('C:/Users/ajay.kumar4/Desktop/SOAPdata.xls'))
+    sheet = wb.getSheet(0)   // Select desired Sheet for External Excel data 
+    log.info "Rows    "+sheet.getRows()
+    log.info "Columns   "+sheet.getColumns()
+     
+        
+        
+        for (int i=1; i&lt;sheet.getRows();i++) {    // loop for row
+      for (int j=0; j&lt;sheet.getColumns(); j++){   // loop for coloumn
+          def data =sheet.getCell(j,i).getContents() // Read Data from Excel
+       def testcase = testRunner.testCase.testSuite.
+       testCases["GenerateOutputPreview TestCase"] // navigate to desired Test case in project
+       // Set property values for desired Test case
+      def prop =  testcase.getTestStepByName("Properties")
+     // prop.setPropertyValue("AJAY","Test")
+     prop.setPropertyValue("noteID",sheet.getCell(0,i).getContents())         
+     prop.setPropertyValue("compID",sheet.getCell(1,i).getContents())         
+     prop.setPropertyValue("userID",sheet.getCell(2,i).getContents())        
+     }
+     // navigate to desired Test case and run
+     log.info "***************executing test for data ROW**************" + i
+     def tCase = testRunner.testCase.testSuite.testCases["GenerateOutputPreview TestCase"]
+     def tStep = tCase.testSteps["GenerateOutputPreview"]
+     tStep.run(testRunner, context)
+    // Reading response data
+    def response = tStep.getPropertyValue("Response");
+    def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+    def holder = groovyUtils.getXmlHolder(response) 
+    def Expected = holder.getNodeValue("//a:OutputMessage");
+    log.info "*******************Expected******************"+Expected 
+  
+   }
+
+wb.close()
+log.info "End of Execution"</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="request" id="d81a2789-c1a2-4287-a85b-765765dd3dc2" name="GenerateOutputPreview">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>BasicHttpBinding_IOutputService</con:interface>
+          <con:operation>GenerateOutputPreview</con:operation>
+          <con:request name="GenerateOutputPreview" id="22fbf476-a360-43ad-8cb5-bb0e1c150faf">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://10.131.168.19:8080/OutputService.svc</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GenerateOutputPreview>\r
+         <!--Optional:-->\r
+         <tem:noteId>${noteId}</tem:noteId>\r
+         <!--Optional:-->\r
+         <tem:compId>${compId}</tem:compId>\r
+         <!--Optional:-->\r
+         <tem:userId>${#TestSuite#userId}</tem:userId>\r
+      </tem:GenerateOutputPreview>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="Valid HTTP Status Codes" id="3b9d8963-767f-40e7-bcfc-0936f4cef42c" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="XPath Match" id="dbaf9a3c-d145-4722-a935-b753b4be9c67" name="XPath Match">
+              <con:configuration>
+                <path>declare namespace i='http://www.w3.org/2001/XMLSchema-instance';
+declare namespace ns1='http://tempuri.org/';
+declare namespace a='http://schemas.datacontract.org/2004/07/RfOutputWs';
+declare namespace ns2='http://schemas.datacontract.org/2004/07/EFwk.Models';
+declare namespace c='http://schemas.datacontract.org/2004/07/EFwk.Models';
+declare namespace s='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace b='http://schemas.datacontract.org/2004/07/BO';
+//a:OutputMessage</path>
+                <content>Success</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Simple Contains" id="e0da2525-8533-45f2-9f8e-65626692b0e2" name="Contains">
+              <con:configuration>
+                <token>Success</token>
+                <ignoreCase>false</ignoreCase>
+                <useRegEx>false</useRegEx>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="XPath Match" id="c507a4e4-7ee0-47f0-9342-af2e94c5abc3">
+              <con:configuration/>
+            </con:assertion>
+            <con:assertion type="Invalid HTTP Status Codes" id="19818f2b-0e08-4f74-bc2b-a9e615145bb0" name="Invalid HTTP Status Codes">
+              <con:configuration>
+                <codes>500</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="SOAP Fault Assertion" id="d4bacdc7-05c2-4b39-bac5-e6a7ef022623" name="Not SOAP Fault"/>
+            <con:assertion type="GroovyScriptAssertion" id="3709761c-2126-480a-82d9-d64a323684fa" name="Script Assertion">
+              <con:configuration>
+                <scriptText>import groovy.json.JsonSlurper 
+
+def response = messageExchange.response.responseContent
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+def holder = groovyUtils.getXmlHolder(response)
+def message = holder["//a:OutputMessage"]
+
+log.info message
+
+assert message=="Success"</scriptText>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig action="http://tempuri.org/IOutputService/GenerateOutputPreview" mustUnderstand="NONE" version="200508"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties>
+        <con:property>
+          <con:name>From</con:name>
+          <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        </con:property>
+        <con:property>
+          <con:name>To</con:name>
+          <con:value xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        </con:property>
+      </con:properties>
+    </con:testCase>
+    <con:testCase id="0d59a95e-1612-489b-a726-2c1c5794b83a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GenerateReport TestCase" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="6b7ba785-3fc9-4767-9a32-ceef69f412eb" name="GenerateReport">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>BasicHttpBinding_IOutputService</con:interface>
+          <con:operation>GenerateReport</con:operation>
+          <con:request name="GenerateReport" id="59bdf5d0-8b87-4d9c-b65f-b9b0054e82bc">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://10.131.168.19:8080/OutputService.svc</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GenerateReport>\r
+         <!--Optional:-->\r
+         <tem:noteId>${noteId}</tem:noteId>\r
+         <!--Optional:-->\r
+         <tem:reportId>${reportId}</tem:reportId>\r
+         <!--Optional:-->\r
+         <tem:templateId>${templateId}</tem:templateId>\r
+         <!--Optional:-->\r
+         <tem:compId>${compId}</tem:compId>\r
+         <!--Optional:-->\r
+         <tem:userId>${#TestSuite#userId}</tem:userId>\r
+      </tem:GenerateReport>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="Valid HTTP Status Codes" id="2933f786-3143-4f6d-a8c5-74764ba0f475" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="GroovyScriptAssertion" id="40e6e760-d604-4b41-ba0a-d233a426ea09" name="Script Assertion">
+              <con:configuration>
+                <scriptText>import groovy.json.JsonSlurper 
+
+def response = messageExchange.response.responseContent
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+def holder = groovyUtils.getXmlHolder(response)
+def message = holder["//a:OutputMessage"]
+
+log.info message
+
+assert message=="Success"</scriptText>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig action="http://tempuri.org/IOutputService/GenerateReport" mustUnderstand="NONE" version="200508"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:testCase id="6531040a-c2fc-4bc1-84b5-360ab3f339ee" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="RegenerateOutputReport TestCase" searchProperties="true">
+      <con:settings/>
+      <con:testStep type="request" id="49d05698-ccc5-41a4-bad0-66513cf872b2" name="RegenerateOutputReport">
+        <con:settings/>
+        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:interface>BasicHttpBinding_IOutputService</con:interface>
+          <con:operation>RegenerateOutputReport</con:operation>
+          <con:request name="RegenerateOutputReport" id="cbb31a04-0702-4c97-8ab4-b22f05a81673">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:encoding>UTF-8</con:encoding>
+            <con:endpoint>http://10.131.168.19:8080/OutputService.svc</con:endpoint>
+            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:RegenerateOutputReport>\r
+         <!--Optional:-->\r
+         <tem:noteId>${noteId}</tem:noteId>\r
+         <!--Optional:-->\r
+         <tem:compId>${compId}</tem:compId>\r
+         <!--Optional:-->\r
+         <tem:userId>${#TestSuite#userId}</tem:userId>\r
+         <!--Optional:-->\r
+         <tem:attachmentIdList>"Test"</tem:attachmentIdList>\r
+      </tem:RegenerateOutputReport>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+            <con:assertion type="Valid HTTP Status Codes" id="0ade1906-5a03-4c6f-b84b-97a19e95a485" name="Valid HTTP Status Codes">
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="GroovyScriptAssertion" id="7a7f8fb7-2b13-481b-849e-d9c82ef411a2" name="Script Assertion">
+              <con:configuration>
+                <scriptText>import groovy.json.JsonSlurper 
+
+def response = messageExchange.response.responseContent
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
+def holder = groovyUtils.getXmlHolder(response)
+def message = holder["//a:OutputMessage"]
+
+log.info message
+
+assert message=="Success"</scriptText>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:wsaConfig action="http://tempuri.org/IOutputService/RegenerateOutputReport" mustUnderstand="NONE" version="200508"/>
+            <con:wsrmConfig version="1.2"/>
+          </con:request>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+    </con:testCase>
+    <con:properties>
+      <con:property>
+        <con:name>UserName</con:name>
+        <con:value>automationbmsprovider</con:value>
+      </con:property>
+      <con:property>
+        <con:name>Password</con:name>
+        <con:value>Bmspass123</con:value>
+      </con:property>
+      <con:property>
+        <con:name>userId</con:name>
+        <con:value>9881</con:value>
+      </con:property>
+      <con:property>
+        <con:name>companyId</con:name>
+        <con:value>438</con:value>
+      </con:property>
+      <con:property>
+        <con:name>gpmsCode</con:name>
+        <con:value>ZZX</con:value>
+      </con:property>
+      <con:property>
+        <con:name>providerId</con:name>
+        <con:value>11603</con:value>
+      </con:property>
+      <con:property>
+        <con:name>status</con:name>
+        <con:value>1</con:value>
+      </con:property>
+      <con:property>
+        <con:name>PatientName</con:name>
+        <con:value>SOAPXlaqqO7oyh58djs1</con:value>
+      </con:property>
+    </con:properties>
+    <con:setupScript/>
+    <con:tearDownScript/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:properties>
+    <con:property>
+      <con:name>LogFilePath</con:name>
+      <con:value>C:\Users\ajay.kumar4\Desktop\SOAPdata/Data</con:value>
+    </con:property>
+  </con:properties>
+  <con:wssContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:sensitiveInformation/>
+</con:soapui-project>
